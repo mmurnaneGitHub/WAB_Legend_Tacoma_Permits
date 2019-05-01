@@ -1,0 +1,103 @@
+<div>
+  <div id="filterDiv" style="background-color:#EAECEE; padding:5px;">   
+    <div>
+     Category: <br>&nbsp;
+     <input id="categorySelect">
+    </div>
+
+    <!--start submenus ---->
+    <div id="Building" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="BuildingMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+ 
+    <div id="Demolition" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="DemolitionMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+ 
+    <div id="Fire" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="FireMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+ 
+    <div id="LandUse" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="LandUseMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+ 
+    <div id="Mechanical" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="MechanicalMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+ 
+    <div id="Plumbing" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="PlumbingMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+ 
+     <div id="ROW" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="ROWMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+
+     <div id="SiteDevelopment" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="SiteDevelopmentMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+
+     <div id="Utility" class="subMenu" style="display:none;">
+     <br>Subcategory: <br>&nbsp;
+     <div id="UtilityMenu"></div> <!--0 returns all sub-categories-->
+     <br>&nbsp;
+    </div>
+
+    <!--end submenus ---->
+
+    <div>
+     Status: <br>&nbsp;
+     <input id="statusSelect">
+    </div>
+   
+    <div id="dateDiv">   
+      Created between: <br>&nbsp; 
+      <span id="date1"></span> and <span id="date2"></span>
+      <br>&nbsp;<br>
+    </div>
+
+    <div>
+      <input id="checkBoxDraw" >   <label for="checkBox">Limit to area drawn on map </label>  
+      <button id="buttonDraw" type="button"></button> <!-- remove graphic, but stay in edit mode -->
+      <br>&nbsp;<br>
+    </div>
+
+  <div id="exportButtonDIV">&nbsp; <div id="exportButton"></div> </div>  
+  
+  <div id="ProgressBar"></div>
+
+   <!-- MJM Permit # Search -->
+   <div><hr color="#acb1db"></div>
+    <div>
+      <br>&nbsp;Find by <b>Permit Number</b>: <br>&nbsp;
+      <input id="PermitNum" >  
+      <button id="buttonPermitNum" type="button"></button>
+      <br>&nbsp;<br>
+    </div>
+
+  </div>
+
+  <div><hr color="#acb1db"></div>
+   
+  <div style="display:none" data-dojo-attach-point="removedDiv"></div>
+
+</div>
+
+

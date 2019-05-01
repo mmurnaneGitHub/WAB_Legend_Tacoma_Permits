@@ -1,0 +1,6 @@
+Minify Notes:
+
+1. Use  https://closure-compiler.appspot.com/home (https://developers.google.com/closure/compiler/)
+2. Select "Simple" Optimization
+
+For other  files: http://www.willpeavy.com/minifier/
