@@ -101,7 +101,6 @@ _WidgetsInTemplateMixin, BaseWidget, LayerInfos, Legend) {
                                             "<b>Address:</b> ${Address_Line_1}" +
                                             "<br> <b>Permit Type: </b> ${Permit_Type_Description}" +
                                             "<br> <b>Current Status: </b> ${Current_Status}" +
-                                            "<br> <b>Status Date: </b> ${Status_Date}" +
                                             "<br> <b>Issued Date: </b> ${Issued_Date}" +
                                             "<br> <b>Fee: </b> ${Fees_Paid}" +
                                             "<br> <b>Estimated Value: </b> ${Valuation}" +
@@ -644,7 +643,6 @@ _WidgetsInTemplateMixin, BaseWidget, LayerInfos, Legend) {
   	            attr["Address_Line_1"] = item.Address_Line_1;
                 attr["Permit_Type_Description"] = item.Permit_Type_Description;
                 attr["Current_Status"] = item.Current_Status;
-                attr["Status_Date"] = item.Status_Date;
                 attr["Issued_Date"] = item.Issued_Date;
                 attr["Fees_Paid"] = item.Fees_Paid;
                 attr["Valuation"] = item.Valuation;
@@ -662,7 +660,6 @@ _WidgetsInTemplateMixin, BaseWidget, LayerInfos, Legend) {
               resultsText += "<b>Address: </b>" + item.Address_Line_1 + "<br>";
               resultsText += "<b>Permit Type: </b>" + item.Permit_Type_Description + "<br>";
               resultsText += "<b>Current Status: </b>" + item.Current_Status + "<br>";
-              resultsText += "<b>Status Date: </b>" + item.Status_Date + "<br>";
               resultsText += "<b>Issued Date: </b>" + item.Issued_Date + "<br>";
               resultsText += "<b>Fee: </b>" + item.Fees_Paid + "<br>";
               resultsText += "<b>Estimated Value: </b>" + item.Valuation + "<br>";  //form number with commas
@@ -804,7 +801,7 @@ _WidgetsInTemplateMixin, BaseWidget, LayerInfos, Legend) {
     _exportToCSV: function() {
       //Using D3 and d3-dsv for exporting to CSV (https://d3js.org/d3-dsv.v1.min.js) - https://jsfiddle.net/jossef/m3rrLzk0/
       //Update variables with current selection set (this.json1)
-      var csvFile = d3.csvFormat(this.json1, ["Permit_Number", "Applied_Date", "Latitude", "Longitude", "Address_Line_1", "Permit_Type_Description", "Current_Status", "Status_Date", "Issued_Date", "Fees_Paid", "Valuation", "Description", "Link"]);  
+      var csvFile = d3.csvFormat(this.json1, ["Permit_Number", "Applied_Date", "Latitude", "Longitude", "Address_Line_1", "Permit_Type_Description", "Current_Status", "Issued_Date", "Fees_Paid", "Valuation", "Description", "Link"]);  
       var filename = 'Selected_Permits.csv'
 
       //Download file depending on browser
