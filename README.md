@@ -1,4 +1,4 @@
-# WAB_Tacoma_Permits_Legend
+# WAB_Legend_Tacoma_Permits
 Customized Legend Widget for Tacoma Permits: https://wspdsmap.cityoftacoma.org/website/PDS/Permits/
 
 Version 2.12
