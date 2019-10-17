@@ -972,7 +972,7 @@ _WidgetsInTemplateMixin, BaseWidget, LayerInfos, Legend) {
               }
               if (item == 'Utility'){
                  theROWList5 = json1_ALL_tmp.filter(function(row) {
-                    return row['Permit_Type_Description'] == 'Right-of-Way Utility ';  //menu value has a space on end
+                    return row['Permit_Type_Description'] == 'Right-of-Way Utility ' || row['Permit_Type_Description'] == 'ePermit Tacoma Water Utility ';  //menu value has a space on end
                  }); 
               }
             });
@@ -1102,7 +1102,7 @@ _WidgetsInTemplateMixin, BaseWidget, LayerInfos, Legend) {
         });
       } else if (dijit.byId("categorySelect").value == 'ROW') {
         json1_ALL_tmp = json1_ALL.filter(function(row) {
-          return row['Longitude'] > lowerLeftLL['0'] && row['Longitude'] < upperRightLL['0'] && row['Latitude'] > lowerLeftLL['1'] && row['Latitude'] < upperRightLL['1'] && Date.parse(row['Applied_Date']) <= Date.parse(endDate) && Date.parse(row['Applied_Date']) >= Date.parse(startDate) && (row['Permit_Type_Description'] == 'Right-of-Way Construction ' || row['Permit_Type_Description'] == 'Right-of-Way Occupancy ' || row['Permit_Type_Description'] == 'Right-of-Way Tree ' || row['Permit_Type_Description'] == 'Right-of-Way Use ' || row['Permit_Type_Description'] == 'Right-of-Way Utility '); //menu value has a space on end
+          return row['Longitude'] > lowerLeftLL['0'] && row['Longitude'] < upperRightLL['0'] && row['Latitude'] > lowerLeftLL['1'] && row['Latitude'] < upperRightLL['1'] && Date.parse(row['Applied_Date']) <= Date.parse(endDate) && Date.parse(row['Applied_Date']) >= Date.parse(startDate) && (row['Permit_Type_Description'] == 'Right-of-Way Construction ' || row['Permit_Type_Description'] == 'Right-of-Way Occupancy ' || row['Permit_Type_Description'] == 'Right-of-Way Tree ' || row['Permit_Type_Description'] == 'Right-of-Way Use ' || row['Permit_Type_Description'] == 'Right-of-Way Utility ' || row['Permit_Type_Description'] == 'ePermit Tacoma Water Utility '); //menu value has a space on end
         });
         //Determine if subcategories are needed 
         if (dijit.byId("ROWMenu").value.length > 0 && dijit.byId("ROWMenu").value.length < dijit.byId("ROWMenu").options.length) { //determine how many submenu items checked (between none or all (options))
@@ -1209,7 +1209,7 @@ _WidgetsInTemplateMixin, BaseWidget, LayerInfos, Legend) {
         });
       } else if (dijit.byId("categorySelect").value == 'ROW') {
         json1_ALL_tmp = json1_POLYGON.filter(function(row) {
-          return Date.parse(row['Applied_Date']) <= Date.parse(endDate) && Date.parse(row['Applied_Date']) >= Date.parse(startDate) && (row['Permit_Type_Description'] == 'Right-of-Way Construction ' || row['Permit_Type_Description'] == 'Right-of-Way Occupancy ' || row['Permit_Type_Description'] == 'Right-of-Way Tree ' || row['Permit_Type_Description'] == 'Right-of-Way Use ' || row['Permit_Type_Description'] == 'Right-of-Way Utility '); //menu value has a space on end
+          return Date.parse(row['Applied_Date']) <= Date.parse(endDate) && Date.parse(row['Applied_Date']) >= Date.parse(startDate) && (row['Permit_Type_Description'] == 'Right-of-Way Construction ' || row['Permit_Type_Description'] == 'Right-of-Way Occupancy ' || row['Permit_Type_Description'] == 'Right-of-Way Tree ' || row['Permit_Type_Description'] == 'Right-of-Way Use ' || row['Permit_Type_Description'] == 'Right-of-Way Utility ' || row['Permit_Type_Description'] == 'ePermit Tacoma Water Utility '); //menu value has a space on end
         });
         //Determine if subcategories are needed 
         if (dijit.byId("ROWMenu").value.length > 0 && dijit.byId("ROWMenu").value.length < dijit.byId("ROWMenu").options.length) { //determine how many submenu items checked (between none or all (options))
@@ -1274,7 +1274,6 @@ _WidgetsInTemplateMixin, BaseWidget, LayerInfos, Legend) {
          });
       }
       this.json1 = json1_ALL_tmp2;  //Update global Selected RECORDS
-      //console.error(this.json1.length);
     },
 
     _searchPermit: function(event) { //MJM - Find by permit number
